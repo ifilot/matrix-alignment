@@ -17,6 +17,7 @@ for i in range(0, matsize):			# loop over V1
 	for j in range(0, matsize):		# loop over V2
 		if np.sum(V1[:,i]) == np.sum(V2[:,j]):
 			E[i*5+j] = 1
+E /= np.linalg.norm(E)
 
 u = 0
 for i in range(0, matsize):			# loop over V1
